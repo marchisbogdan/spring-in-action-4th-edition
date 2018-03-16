@@ -23,6 +23,7 @@ public class Main {
 		
 		Car carFiat = (Car) context.getBean(Car.class);
 		System.out.println(carFiat.toString());
+		carFiat.startStopCar();
 
 	}
 	
