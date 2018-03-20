@@ -19,14 +19,15 @@ repositories {
 
 ext.versions = [
         'aopVersion' : '1.8.10',
+        'springVersion': '4.2.6.RELEASE'
 ]
 
 dependencies {
     // This dependency is exported to consumers, that is to say found on their compile classpath.
     api 'org.apache.commons:commons-math3:3.6.1'
     
-    // https://mvnrepository.com/artifact/org.springframework/spring-context
-	compile group: 'org.springframework', name: 'spring-context', version: '4.2.6.RELEASE'
+	compile group: 'org.springframework', name: 'spring-context', version: versions.springVersion
+testCompile group: 'org.springframework', name: 'spring-test', version: versions.springVersion
 	
 	// AOP AspectJ
 	compile group: 'org.aspectj', name: 'aspectjrt', version: versions.aopVersion
