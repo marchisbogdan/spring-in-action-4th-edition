@@ -1,5 +1,10 @@
 package com.action.models;
 
+import javax.annotation.PostConstruct;
+
+import org.springframework.stereotype.Component;
+
+@Component
 public class CarComputer {
 	
 	private String model;
@@ -12,9 +17,18 @@ public class CarComputer {
 		System.out.println(model+": Closing the engine of the car....");
 	}
 
+	public CarComputer() {
+		super();
+	}
+
 	public CarComputer(String model) {
 		super();
 		this.model = model;
+	}
+	
+	@PostConstruct
+	public void init(){
+		this.model = "Android";
 	}
 
 	@Override

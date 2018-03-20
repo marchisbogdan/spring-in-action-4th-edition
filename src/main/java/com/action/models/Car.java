@@ -1,15 +1,25 @@
 package com.action.models;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.action.aop.interfaces.ExampleAOPUsageInterface;
 import com.action.models.interfaces.IEngine;
 
+@Component
 public class Car {
 	private String name;
 	private IEngine engine;
 	private int power;
 	private int capacity;
+	
+	@Autowired
 	private CarComputer carComputer;
 	
+	public Car() {
+		super();
+	}
+
 	public Car(String name, IEngine engine, CarComputer carComputer) {
 		super();
 		this.name = name;

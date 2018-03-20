@@ -27,17 +27,15 @@ public class SimpleBean implements BeanNameAware, BeanFactoryAware, ApplicationC
 	private int justANumber;
 	private String justAString;
 	
-	@Autowired
-	private ValidationUtils validationUtils;
-	
-	
-	
-	public SimpleBean(int justANumber, String justAString, ValidationUtils validationUtils) {
+	public SimpleBean() {
+		super();
+	}
+
+	public SimpleBean(int justANumber, String justAString) {
 		// 2. First the properties of the class and the class references a set
 		super();
 		this.justANumber = justANumber;
 		this.justAString = justAString;
-		this.validationUtils = validationUtils;
 	}
 
 	@Override
