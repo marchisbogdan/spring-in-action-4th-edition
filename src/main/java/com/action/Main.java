@@ -4,6 +4,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import com.action.config.InstitutionsConfig;
 import com.action.models.Car;
+import com.action.models.Library;
 import com.action.models.RAR;
 
 
@@ -22,7 +23,10 @@ public class Main {
 		RAR rar = (RAR) context.getBean(RAR.class);
 		rar.enter();
 		System.out.println();
-
+		
+		Library library = (Library) context.getBean(Library.class);
+		library.enter();
+		
 		Car carFiat = (Car) context.getBean(Car.class);
 		System.out.println(carFiat.toString());
 		carFiat.startStopCar();

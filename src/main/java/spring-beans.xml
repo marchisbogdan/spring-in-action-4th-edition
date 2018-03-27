@@ -6,7 +6,7 @@
 		
 		
 	<bean name="library" class="com.action.models.Library">
-		<property name="name" value="Alexandria"/>
+		<property name="name" value="${library.name}"/>
 	</bean>
 	
 </beans>

@@ -1,6 +1,7 @@
 package com.action.models;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import com.action.aop.interfaces.ExampleAOPUsageInterface;
@@ -8,6 +9,7 @@ import com.action.models.interfaces.IEngine;
 
 @Component
 public class Car {
+	@Value("${car.name}")
 	private String name;
 	private IEngine engine;
 	private int power;
